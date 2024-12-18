@@ -1,0 +1,38 @@
+# conda-recipe/meta.yaml
+
+package:
+  name: llm-utils
+  version: "0.1.0"
+
+source:
+  path: ../
+
+build:
+  number: 0
+  script: python -m pip install . -vv
+
+requirements:
+  host:
+    - python
+    - pip
+    - setuptools
+  run:
+    - python >=3.9
+    - google-generativeai >=0.8.3
+    - openai >=1.57.4
+    - requests >=2.32.3
+    - python-dotenv >=1.0.1
+    - fastapi >=0.115.6
+    - pydantic >=2.10.3
+
+about:
+  home: https://github.com/OzMaatuk/LLMUtils
+  license: MIT
+  license_family: MIT
+  summary: A unified interface for managing LLMs.
+  description: A unified interface for managing LLMs like Google Generative AI, Hugging Face, and OpenAI.
+  dev_url: https://github.com/OzMaatuk/LLMUtils
+
+extra:
+  recipe-maintainers:
+    - OzLevi <ozmaatuk@gmail.com>
